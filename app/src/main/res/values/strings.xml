@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">shrink_tc_app</string>
+    <string name="system_static_info">系統靜態訊息</string>
+    <string name="sys_dyn_info">動態畫面</string>
+    <string name="button">Button</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

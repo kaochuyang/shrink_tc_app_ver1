@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/weekday_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="目前時段型態"
+            android:textSize="27dp" />
+
+        <TextView
+            android:id="@+id/label_weeday_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/weekday_label"
+            android:text="周內日:  "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/label_monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text=" 一 "
+            android:textSize="18sp"
+            android:layout_below="@+id/weekday_label"
+            android:layout_toRightOf="@+id/label_modify_mark" />
+
+        <TextView
+            android:id="@+id/label_tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:text=" 二 "
+            android:textSize="18sp"
+            android:layout_alignBaseline="@+id/label_wednesday"
+            android:layout_alignBottom="@+id/label_wednesday"
+            android:layout_toRightOf="@+id/label_monday" />
+
+        <TextView
+            android:id="@+id/label_wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text=" 三 "
+            android:textSize="18sp"
+            android:layout_below="@+id/weekday_label"
+            android:layout_toRightOf="@+id/label_tuesday" />
+
+        <TextView
+            android:id="@+id/label_thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text=" 四 "
+            android:textSize="18sp"
+            android:layout_alignBaseline="@+id/label_friday"
+            android:layout_alignBottom="@+id/label_friday"
+            android:layout_toRightOf="@+id/label_wednesday" />
+
+        <TextView
+            android:id="@+id/label_friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 五 "
+            android:textSize="18sp"
+            android:layout_alignBaseline="@+id/label_saturday"
+            android:layout_alignBottom="@+id/label_saturday"
+            android:layout_toRightOf="@+id/label_thursday" />
+
+        <TextView
+            android:id="@+id/label_saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text=" 六 "
+            android:textSize="18sp"
+            android:layout_alignBaseline="@+id/label_sunday"
+            android:layout_alignBottom="@+id/label_sunday"
+            android:layout_toRightOf="@+id/label_friday" />
+
+        <TextView
+            android:id="@+id/label_sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text=" 日 "
+            android:textSize="18sp"
+            android:layout_below="@+id/weekday_label"
+            android:layout_toRightOf="@+id/label_saturday" />
+
+        <TextView
+            android:id="@+id/label_segement_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/label_weeday_mark"
+            android:text="目前時段型態:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/label_modify_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/label_segement_mark"
+            android:text="變更時段型態為:"
+            android:textSize="18sp" />
+
+        <!--以上是靜態內容-->
+        <!--區分內容和功能的分隔線-->
+        <View
+            android:id="@+id/gap_line_tod_xml"
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="150sp"
+            android:background="#000000" />
+        <!--區分內容和功能的分隔線-->
+        <!--以下開始是功能連結-->
+
+        <TextView
+            android:id="@+id/label_set_segmenttype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gap_line_tod_xml"
+            android:text="時段型態選擇: "
+            android:textSize="27dp" />
+        <Spinner
+            android:id="@+id/segmenttype_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gap_line_tod_xml"
+          android:layout_toRightOf="@id/label_set_segmenttype"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@+id/label_set_segmenttype"
+    >
+        <TextView
+            android:id="@+id/textView"
+
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/label_weeday_mark"
+            android:layout_below="@+id/label_set_segmenttype"
+            android:layout_width="fill_parent" android:layout_weight="1"
+           android:shadowColor="@color/colorAccent"
+            android:text="TextView  " />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent" android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:text="TextView  " />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="fill_parent" android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_set_segmenttype"
+            android:layout_toEndOf="@+id/label_modify_mark"
+            android:text="TextView  " />
+</LinearLayout>
+
+    </RelativeLayout>
+
+
+<!--</layout>-->
