@@ -5,117 +5,168 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+<LinearLayout
+
+    android:id="@+id/weekday_label_mark"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
         <TextView
             android:id="@+id/weekday_label"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
 
-            android:text="目前時段型態"
+            android:text="周內日時段型態"
             android:textSize="27dp" />
 
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/weekday_label_group"
+        android:layout_below="@+id/weekday_label_mark"
+
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/label_weeday_mark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/weekday_label"
-            android:text="周內日:  "
+            android:gravity="center_horizontal"
+            android:text="   周內日  :"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/label_monday"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:layout_height="wrap_content"
-
-            android:text=" 一 "
+            android:layout_marginEnd="@+id/label_segement_mark"
+            android:text="一"
             android:textSize="18sp"
-            android:layout_below="@+id/weekday_label"
-            android:layout_toRightOf="@+id/label_modify_mark" />
+             />
 
         <TextView
             android:id="@+id/label_tuesday"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent" android:layout_weight="1"
             android:layout_height="wrap_content"
-
+            android:gravity="center_horizontal"
 
             android:text=" 二 "
             android:textSize="18sp"
-            android:layout_alignBaseline="@+id/label_wednesday"
-            android:layout_alignBottom="@+id/label_wednesday"
-            android:layout_toRightOf="@+id/label_monday" />
+         />
 
         <TextView
             android:id="@+id/label_wednesday"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent" android:layout_weight="1"
             android:layout_height="wrap_content"
-
+            android:gravity="center_horizontal"
             android:text=" 三 "
             android:textSize="18sp"
-            android:layout_below="@+id/weekday_label"
-            android:layout_toRightOf="@+id/label_tuesday" />
+          />
 
         <TextView
             android:id="@+id/label_thursday"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent" android:layout_weight="1"
             android:layout_height="wrap_content"
-
+            android:gravity="center_horizontal"
             android:text=" 四 "
             android:textSize="18sp"
-            android:layout_alignBaseline="@+id/label_friday"
-            android:layout_alignBottom="@+id/label_friday"
-            android:layout_toRightOf="@+id/label_wednesday" />
+         />
 
         <TextView
             android:id="@+id/label_friday"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent" android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text=" 五 "
+            android:gravity="center_horizontal"
             android:textSize="18sp"
-            android:layout_alignBaseline="@+id/label_saturday"
-            android:layout_alignBottom="@+id/label_saturday"
-            android:layout_toRightOf="@+id/label_thursday" />
+          />
 
         <TextView
             android:id="@+id/label_saturday"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent" android:layout_weight="1"
             android:layout_height="wrap_content"
-
+            android:gravity="center_horizontal"
             android:text=" 六 "
             android:textSize="18sp"
-            android:layout_alignBaseline="@+id/label_sunday"
-            android:layout_alignBottom="@+id/label_sunday"
-            android:layout_toRightOf="@+id/label_friday" />
+ />
 
         <TextView
             android:id="@+id/label_sunday"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent" android:layout_weight="1"
             android:layout_height="wrap_content"
-
+            android:gravity="center_horizontal"
             android:text=" 日 "
             android:textSize="18sp"
-            android:layout_below="@+id/weekday_label"
-            android:layout_toRightOf="@+id/label_saturday" />
-
+           />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/weekday_label_group"
+        android:id="@+id/common_day_setting_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/label_segement_mark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/label_weeday_mark"
-            android:text="目前時段型態:"
+            android:text="時段型態:"
             android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/label_modify_mark"
+        <Spinner
+            android:id="@+id/spin_common_day_1"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:id="@+id/spin_common_day_2"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:id="@+id/spin_common_day_3"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:id="@+id/spin_common_day_4"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:id="@+id/spin_common_day_5"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:id="@+id/spin_common_day_6"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:id="@+id/spin_common_day_7"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/label_segement_mark"
-            android:text="變更時段型態為:"
-            android:textSize="18sp" />
+
+    </LinearLayout>
+
+        <!--<TextView-->
+            <!--android:id="@+id/label_modify_mark"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_below="@+id/label_segement_mark"-->
+            <!--android:text="變更時段型態為:"-->
+            <!--android:textSize="18sp" />-->
 
         <!--以上是靜態內容-->
         <!--區分內容和功能的分隔線-->
@@ -127,52 +178,100 @@
             android:background="#000000" />
         <!--區分內容和功能的分隔線-->
         <!--以下開始是功能連結-->
+    <LinearLayout
 
+        android:id="@+id/special_day_label_mark"
+        android:layout_below="@+id/gap_line_tod_xml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/label_set_segmenttype"
-            android:layout_width="wrap_content"
+            android:id="@+id/special_label"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/gap_line_tod_xml"
-            android:text="時段型態選擇: "
+
+            android:text="特別日時段型態"
             android:textSize="27dp" />
-        <Spinner
-            android:id="@+id/segmenttype_select"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/gap_line_tod_xml"
-          android:layout_toRightOf="@id/label_set_segmenttype"/>
+
+    </LinearLayout>
+
 <LinearLayout
+    android:id="@+id/special_day_label_mark_group"
+    android:layout_below="@+id/special_day_label_mark"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_below="@+id/label_set_segmenttype"
-    >
-        <TextView
-            android:id="@+id/textView"
+    android:layout_height="wrap_content">
 
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/label_weeday_mark"
-            android:layout_below="@+id/label_set_segmenttype"
-            android:layout_width="fill_parent" android:layout_weight="1"
-           android:shadowColor="@color/colorAccent"
-            android:text="TextView  " />
+    <TextView
+        android:id="@+id/special_day_segmenttype_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="時段型態"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/speciday_start_date_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="開始日期"
+        android:textSize="18sp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/speciday_start_time_mark"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="開始時間"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/speciday_end_date_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="結束日期"
+        android:textSize="18sp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/speciday_end_time_mark"
+        android:layout_width="wrap_content"
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="fill_parent" android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textView"
-            android:layout_toEndOf="@+id/textView"
-            android:text="TextView  " />
+        android:layout_height="wrap_content"
+        android:text="結束時間"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="fill_parent" android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/label_set_segmenttype"
-            android:layout_toEndOf="@+id/label_modify_mark"
-            android:text="TextView  " />
 </LinearLayout>
+<LinearLayout
+    android:id="@+id/segmenttype_group_8"
+    android:layout_below="@+id/special_day_label_mark_group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/segmenttype_button_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="時段型態8"
+
+        android:textSize="18sp"
+        android:gravity="center_horizontal"/>
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format24Hour="MM/dd/yy h:mmaa"
+        />
+
+</LinearLayout>
+
+
+
+
 
     </RelativeLayout>
 
